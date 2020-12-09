@@ -1,0 +1,54 @@
+
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+ 
+ /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+div.card-header {
+ font-size: smaller;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
+
+
+/* only scss/SaSS file changes the app and overrides bootstrap */
+
+
+ 
+
+.nav-pills > li > a.active {
+  background-color: #3f3c3c !important;
+  color: #ffffff !important;
+}
+
+  .nav-pills > li.active > a:hover {
+            background-color: #efcb00 !important;
+            color:black !important;
+        }  
+
+.nav-link-color {
+
+  color: #ffffff !important;
+}
+
+
+
+
+.nav-pills > .active > a:focus {
+   	background-color: red;
+   }
+ .nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+        color: black !important;
+        background-color: #fcd900 !important;
+    }
+   
+
+      

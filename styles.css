@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+div.card-header {
+ font-size: smaller;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
+
+.nav-pills > li > a.active {
+    background-color: #ffff00!important;
+}
+
+
+.red .active a,
+.red .active a:hover {
+    background-color: red;
+}
+
+.darkgrey .active a,
+.darkgrey .active a:hover {
+    background-color: red;
+}
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    background-color: red;
+}
+ .nav-pills > .active > a:focus {
+   	background-color: red;
+   }
+
+       .nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+        color: black;
+        background-color: #fcd900;
+    }
+
+        .nav-pills > li.active > a:hover {
+            background-color: #efcb00;
+            color:black;
+        }

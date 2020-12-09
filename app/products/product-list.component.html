@@ -1,0 +1,88 @@
+
+
+<!-- 	<ag-grid-angular
+    style="width: 500px; height: 450px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs">
+ </ag-grid-angular> -->
+ <div>  
+ 	 <tbody>
+          <tr *ngFor="let product of products">
+            <td>
+            	<prod-root></prod-root>
+            </td>
+           </tr>
+         </tbody>   
+    Data Grid Products array goes here
+    <ul *ngIf='products && products.length'>
+	  <li *ngFor="let product of products">
+
+	    <h2>{{product.Name}} / ${{product.Price}}</h2>
+	    <p> {{product.Catagory}} </p>
+	</li>
+	</ul>
+	</div>
+
+
+
+
+	  <!-- <div class="table-responsive">
+      <table class="table mb-0"
+             *ngIf="products && products.length">
+        <thead>
+          <tr>
+            <th>
+              <button class="btn btn-outline-primary btn-sm"
+                      (click)="toggleImage()">
+                {{showImage ? "Hide" : "Show"}} Image
+              </button>
+            </th>
+            <th>Product</th>
+            <th>Code</th>
+            <th>Available</th>
+            <th>Price</th>
+            <th>5 Star Rating</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of filteredProducts">
+            <td>
+              <img *ngIf="showImage && product.imageUrl"
+                   [src]="product.imageUrl"
+                   [title]="product.productName"
+                   [style.width.px]="imageWidth"
+                   [style.margin.px]="imageMargin">
+            </td>
+            <td>
+              <a [routerLink]="[product.id]"
+                 [queryParams]="{filterBy: listFilter, showImage: showImage}">
+                {{ product.productName }}
+              </a>
+            </td>
+            <td>{{ product.productCode }}</td>
+            <td>{{ product.releaseDate }}</td>
+            <td>{{ product.price | currency:"USD":"symbol":"1.2-2" }}</td>
+            <td>
+              <pm-star [rating]="product.starRating">
+              </pm-star>
+            </td>
+            <td>
+              <button class="btn btn-outline-primary btn-sm"
+                      [routerLink]="[product.id, 'edit']">
+                Edit
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div> -->
+
+<div *ngIf="errorMessage"
+     class="alert alert-danger">
+  Error: {{ errorMessage }}
+</div>

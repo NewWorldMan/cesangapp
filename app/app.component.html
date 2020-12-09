@@ -1,0 +1,63 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!--
+ <ag-grid-angular
+    style="width: 500px; height: 300px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs">
+</ag-grid-angular> 
+-->
+ <button class="btn btn-outline-primary btn-sm"
+                      (click)="toggleView()">
+                {{showList ? "Fetch Local" : "Fetch Remote"}} API
+              </button>
+ <div *ngIf='showList' style="visibility:none">
+    <!-- <div class="card-body ag-theme-alpine">
+        <div *ngFor="let item of pageOfItems">{{item.name}}</div>
+    </div>  -->
+          <div class="card text-center m-3 ag-theme-alpine">
+            <h3 class="card-header">CES Demo Employee List</h3>
+            <router-outlet>Hello <a class='link' routerLinkActive='active' [routerLink]="['/products']">Paintings List</a></router-outlet>
+            <div class="card-body ag-theme-alpine">
+               <ag-grid-angular
+                  style="width: 500px; height: 220px;"
+                  class="ag-theme-alpine"
+                  [rowData]="rowData"
+                  [columnDefs]="columnDefs">
+                  </ag-grid-angular>
+            </div>
+          </div>
+ </div><!--last div for ang grid bld and hide div -->
+
+<div *ngIf='!showList' style="visibility:none">
+    <div class="card text-center m-3 ag-theme-alpine">
+    <h3 class="card-header">CES Product List  </h3> 
+       <div class="card-body ag-theme-alpine"></div>
+       <ul *ngIf='products && products.length'>
+       <li *ngFor="let product of products">
+    <h2>{{product.Name}} / ${{product.Price}} Product array info</h2>
+    <p> {{product.Catagory}} </p>
+        </li>
+        </ul>
+     </div>
+</div>
+
+                
+<!--
+<ul *ngIf='products && products.length'>
+<li *ngFor="let product of products">
+    <h2>{{product.Name}} / ${{product.Price}}</h2>
+    <p> {{product.Catagory}} </p>
+
+</li>
+</ul>
+
+<jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+-->
